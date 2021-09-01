@@ -48,6 +48,7 @@ nginx: configuration file /etc/nginx/nginx.conf test is successful
 ```
 Then reload nginx:
 `service nginx reload`
+
 ### Install cerbot
 Update snapd:
 ```
@@ -64,19 +65,22 @@ Install Let's encrypt certs for Coral:
 `sudo certbot --nginx`
 
 ### Setup coral
-Open `https://comments.trizone.com.au` and follow the installation wizard.
+Open the URL that you have setup for Coral comments and follow the installation wizard.
 
-In the last step enter your website URL in *Site permitted domains* field: https://www.trizone.com.au
+We have assumed that you have created a new A-record to point to this new instance running. eg. A Record - IP address of your new instance running - comments.your.wordpresssite.com
+
+In the last step enter your website URL in *Site permitted domains* field: https://your.wordpresssite.com.
 
 ### Setup the Wordpress plugin
 Install and activate the wordpress plugin from here:
 `https://github.com/coralproject/talk-wp-plugin`
 
-Then navigate to ‍‍[https://trizone.com.au/wp-admin/options-general.php?page=talk-settings](https://trizone.com.au/wp-admin/options-general.php?page=talk-settings) and set the following values:
+Then navigate to ‍‍[https://your.wordpress.site.com/wp-admin/options-general.php?page=talk-settings](https://your.wordpresssite.com/wp-admin/options-general.php?page=talk-settings) and set the following values:
 
-- Server Base URL: https://comments.trizone.com.au
-- Static Asset URL: https://comments.trizone.com.au
+- Server Base URL: https://your.wordpresssite.com
+- Static Asset URL: https://your.wordpresssite.com
 - Version: 5+
+* NB: replace your.wordpresssite.com with your own domain
 
 ## Create Database backups
 The following command creates a database(mongo) backup and writes it to the *mongo-backup* directory.
