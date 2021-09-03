@@ -72,13 +72,12 @@ We have assumed that you have created a new A-record to point to this new instan
 In the last step enter your website URL in *Site permitted domains* field: https://your.wordpresssite.com.
 
 ### Setup the Wordpress plugin
-Install and activate the wordpress plugin from here:
-`https://github.com/coralproject/talk-wp-plugin`
-
+Copy the updated Coral Wordpress plugin from `talk-wp` directory in this repository to your wordpress plugins directory. Then install and activate the plugin.
 Then navigate to ‍‍[https://your.wordpress.site.com/wp-admin/options-general.php?page=talk-settings](https://your.wordpresssite.com/wp-admin/options-general.php?page=talk-settings) and set the following values:
 
 - Server Base URL: https://your.wordpresssite.com
 - Static Asset URL: https://your.wordpresssite.com
+- JWT secret token: You can find this token in the authentication page(SSO) of Coral(http://CORAL_DOMAIN/admin/configure/auth).
 - Version: 5+
 * NB: replace your.wordpresssite.com with your own domain
 
